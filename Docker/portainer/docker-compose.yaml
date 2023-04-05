@@ -2,7 +2,6 @@ version: '3'
 services:
   portainer:
     container_name: portainer
-    network_mode: host
     image: portainer/portainer-ce:latest
     ports:
       - 9443:9443
