@@ -1,15 +1,52 @@
 services:
-    Sonarr:
-      container_name: Sonarr
-      hostname: sonarr_host
-      image: linuxserver/sonarr:latest
-      restart: unless-stopped
-      volumes:
-        - /home/lakakid/dotfiles/sonarr:/config
-        - /media/hdd/tvshows:/tvshows
-        # - /mnt/user/appdata/qbittorrent/downloads:/downloads
-        - /media/hdd/downloads:/downloads
-      environment:
-        - TZ=America/Los_Angeles
-      ports:  
-        - 8989:8989
+  Sonarr:
+    container_name: Sonarr
+    hostname: sonarr_host
+    image: linuxserver/sonarr:latest
+    restart: unless-stopped
+    volumes:
+      - /home/lakakid/dotfiles/sonarr:/config
+      - /media/hdd/tvshows:/tvshows
+      # - /mnt/user/appdata/qbittorrent/downloads:/downloads
+      - /media/hdd/downloads:/downloads
+    environment:
+      - TZ=America/Los_Angeles
+    ports:  
+      - 8989:8989
+
+  prowlarr:
+    hostname: prowlarr_host
+    image: lscr.io/linuxserver/prowlarr:develop
+    container_name: prowlarr
+    environment:
+      - PUID=99
+      - PGID=100
+      - TZ=America/Los_Angeles
+    volumes:
+      - /home/lakakid/dotfiles/prowlarr:/config
+    ports:
+      - 9696:9696
+    restart: unless-stopped
+
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    hostname: radarr_host
+    tty:  true
+    stdin_open: true
+    environment:
+      - PUID=99
+      - PGID=100
+      - TZ=America/Los_Angeles
+    volumes:
+      - /home/lakakid/dotfiles/radarr:/config
+      - /media/hdd/:/media
+      - /media/hdd/movies/:/movies
+      - /media/hdd/movies/downloads:/downloads
+    restart: unless-stopped
+    ports:
+      - 7878:7878
+
+
+
+
