@@ -1,4 +1,3 @@
-version: "3"
 services:
     Sonarr:
       container_name: Sonarr
@@ -6,15 +5,11 @@ services:
       image: linuxserver/sonarr:latest
       restart: unless-stopped
       volumes:
-        - /mnt/user/appdata/sonarr:/config
-        - /mnt/user/media/SHOWS:/SHOWS
-        - /mnt/user/media/ANIME:/ANIME
+        - /home/lakakid/dotfiles/sonarr:/config
+        - /media/hdd/tvshows:/tvshows
         # - /mnt/user/appdata/qbittorrent/downloads:/downloads
-        - /mnt/sata_cache/downloads:/downloads
-
+        - /media/hdd/downloads:/downloads
       environment:
-        - PUID=99
-        - PGID=100
         - TZ=America/Los_Angeles
       ports:  
-        - 8990:8989
+        - 8989:8989
