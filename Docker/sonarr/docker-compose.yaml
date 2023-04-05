@@ -10,6 +10,8 @@ services:
       # - /mnt/user/appdata/qbittorrent/downloads:/downloads
       - /media/hdd/downloads:/downloads
     environment:
+      - PUID=1000
+      - PGID=1000
       - TZ=America/Los_Angeles
     ports:  
       - 8989:8989
@@ -19,8 +21,8 @@ services:
     image: lscr.io/linuxserver/prowlarr:develop
     container_name: prowlarr
     environment:
-      - PUID=99
-      - PGID=100
+      - PUID=1000
+      - PGID=1000
       - TZ=America/Los_Angeles
     volumes:
       - /home/lakakid/dotfiles/prowlarr:/config
@@ -35,8 +37,8 @@ services:
     tty:  true
     stdin_open: true
     environment:
-      - PUID=99
-      - PGID=100
+      - PUID=1000
+      - PGID=1000
       - TZ=America/Los_Angeles
     volumes:
       - /home/lakakid/dotfiles/radarr:/config
