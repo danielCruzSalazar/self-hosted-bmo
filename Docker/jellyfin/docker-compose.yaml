@@ -37,6 +37,7 @@ services:
     volumes:
       - /home/lakakid/dotfiles/jellyseer/config:/app/config
     restart: unless-stopped
+  
   jfa-go:
     container_name: jfa-go
     hostname: jfa-go_host
