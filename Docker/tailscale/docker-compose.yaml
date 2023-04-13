@@ -7,8 +7,6 @@ services:
       container_name: tailscale
       image: tailscale/tailscale:latest
       volumes:
-          - "/var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket"
-          - "/var/run/tailscale:/var/run/tailscale"
           - "/home/lakakid/dotfiles/tailscale:/var/lib"        # State data will be stored in this directory
           - "/dev/net/tun:/dev/net/tun"                        # Required for tailscale to work
       cap_add:                                                 # Required for tailscale to work
