@@ -5,7 +5,7 @@ services:
       hostname: tailscale                                          # This will become the tailscale device name
       network_mode: "host"
       container_name: tailscale
-      image: tailscale/tailscale:latest
+      image: tailscale/tailscale:stable
       volumes:
           - "/home/lakakid/dotfiles/tailscale:/var/lib"        # State data will be stored in this directory
           - "/dev/net/tun:/dev/net/tun"                        # Required for tailscale to work
