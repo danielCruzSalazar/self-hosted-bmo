@@ -7,21 +7,20 @@ services:
     ports:
       - 25567:25567
     volumes:
-      - "/mnt/user/appdata/atm8:/data"
+      - "/home/lakakid/dotfiles/minecraft:/data"
     tty: true
     stdin_open: true
     environment:
-      UID: 99
-      GUID: 100
-      TYPE: FORGE
-      FORGE_VERSION: 43.2.3
+      UID: 1000
+      GUID: 1000
+      ONLINE_MODE: "FALSE"
       MAX_TICK_TIME: -1
       ENABLE_AUTOPAUSE: "TRUE"
       AUTOPAUSE_TIMEOUT_INIT: "600"
       AUTOPAUSE_TIMEOUT_EST: "400"
       # USE_MODPACK_START_SCRIPT: "FALSE"
-      VERSION: 1.19.2
-      SEED: 777111999
+      VERSION: 1.19.3
+      SEED: 69696969696969
       PVP: "TRUE"
       ALLOW_FLIGHT: "TRUE"
       EULA: "TRUE"
@@ -35,7 +34,7 @@ services:
       ENABLE_COMMAND_BLOCK: "TRUE"
       GENERATE_STRUCTURES: "TRUE"
       VIEW_DISTANCE: 14
-      OPS: user
+      OPS: user, lakakidd
       MAX_BUILD_HEIGHT: 256
       SPAWN_PROTECTION: 1
       MODE: survival
