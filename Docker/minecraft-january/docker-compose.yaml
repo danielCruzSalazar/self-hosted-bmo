@@ -5,7 +5,7 @@ services:
     container_name: atm8
     hostname: atm8_host
     ports:
-      - 25567:25567
+      - 25565:25565
     volumes:
       - "/home/lakakid/dotfiles/minecraft:/data"
     tty: true
