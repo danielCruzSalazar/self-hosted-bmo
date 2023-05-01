@@ -5,7 +5,7 @@ services:
     image: linuxserver/sonarr:latest
     restart: unless-stopped
     volumes:
-      - /home/lakakid/dotfiles/sonarr:/config
+      - /home/lakakid/dotfiles/sonarrAnime:/config
       - /media/hdd/anime:/anime
       # - /mnt/user/appdata/qbittorrent/downloads:/downloads
       - /media/hdd/downloads:/downloads
