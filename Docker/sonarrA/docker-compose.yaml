@@ -1,0 +1,17 @@
+services:
+  Sonarr:
+    container_name: SonarrAnime
+    hostname: sonarr_host
+    image: linuxserver/sonarr:latest
+    restart: unless-stopped
+    volumes:
+      - /home/lakakid/dotfiles/sonarr:/config
+      - /media/hdd/anime:/anime
+      # - /mnt/user/appdata/qbittorrent/downloads:/downloads
+      - /media/hdd/downloads:/downloads
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Los_Angeles
+    ports:  
+      - 8988:8988

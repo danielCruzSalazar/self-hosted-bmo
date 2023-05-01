@@ -10,7 +10,7 @@ services:
           - "/home/lakakid/dotfiles/tailscale:/var/lib"        # State data will be stored in this directory
           - "/dev/net/tun:/dev/net/tun"    
           - "/var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket"                    # Required for tailscale to work
-      cap_add:                                                 # Required for tailscale to work
+      cap_add:                                                  # Required for tailscale to work
         - net_admin
         #- sys_module
       environment:
