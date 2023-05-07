@@ -1,7 +1,7 @@
 version: "2.1"
 services:
   readarr:
-    image: lscr.io/linuxserver/readarr:stable
+    image: lscr.io/linuxserver/readarr:latest
     container_name: readarr
     environment:
       - PUID=1000
