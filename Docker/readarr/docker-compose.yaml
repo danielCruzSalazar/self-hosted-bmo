@@ -1,6 +1,7 @@
 version: "2.1"
 services:
   readarr:
+    hostname: readarr_host
     image: lscr.io/linuxserver/readarr:develop
     container_name: readarr
     environment:
