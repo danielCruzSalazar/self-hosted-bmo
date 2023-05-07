@@ -5,6 +5,7 @@ services:
         container_name: kavita
         hostname: kavita_host
         volumes:
+            - /mnt/user/comics_share/manga:/manga
             - /mnt/user/comics_share/:/comics 
             - /mnt/user/comics_share/BOOKS/:/books
             - /mnt/user/appdata/kavita:/kavita/config
