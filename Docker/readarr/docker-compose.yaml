@@ -9,6 +9,7 @@ services:
       - TZ=America/Los_Angeles
     volumes:
       - /home/lakakid/dotfiles/readarr:/config
+      - /media/hdd/manga:/manga
     ports:
       - 8787:8787
     restart: unless-stopped
