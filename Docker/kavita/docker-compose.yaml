@@ -11,5 +11,5 @@ services:
         environment:
             - TZ=America/Los_Angeles
         ports:
-            - "8688:5000"
+            - "5000:5000"
         restart: unless-stopped
