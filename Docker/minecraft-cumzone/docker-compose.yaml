@@ -7,7 +7,7 @@ services:
     ports:
       - 25565:25565
     volumes:
-      - "/home/lakakid/dotfiles/minecraft:/data"
+      - "/home/lakakid/dotfiles/mc:/data"
     tty: true
     stdin_open: true
     environment:
@@ -20,7 +20,7 @@ services:
       AUTOPAUSE_TIMEOUT_EST: "400"
       # USE_MODPACK_START_SCRIPT: "FALSE"
       VERSION: 1.19.4
-      SEED: 420420420420420420420420
+      SEED: 420420420420
       PVP: "TRUE"
       ALLOW_FLIGHT: "TRUE"
       EULA: "TRUE"
