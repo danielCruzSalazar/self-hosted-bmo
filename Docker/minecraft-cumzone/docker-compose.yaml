@@ -20,7 +20,6 @@ services:
       AUTOPAUSE_TIMEOUT_EST: "400"
       # USE_MODPACK_START_SCRIPT: "FALSE"
       VERSION: 1.19.3
-      SEED: 420420420420
       PVP: "TRUE"
       ALLOW_FLIGHT: "TRUE"
       EULA: "TRUE"
@@ -55,8 +54,3 @@ services:
           memory: 10G
         reservations:
           memory: 2G
-
-    healthcheck:
-      test: ["CMD", "/bin/check-health"]
-      interval: 10s
-      timeout: 3s
