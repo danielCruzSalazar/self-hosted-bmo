@@ -1,0 +1,25 @@
+version: "3.3"
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    container_name: minecraft
+    hostname: minecraft_host
+    ports:
+      - 25565:25565
+    volumes:
+      - "/home/lakakid/dotfiles/mine:/data"
+    environment:
+      ONLINE_MODE: "FALSE"
+      EULA: "TRUE"
+      VERSION: 1.19.3
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 3s
+        max_attempts: 3
+      resources:
+        limits:
+          memory: 10G
+        reservations:
+          memory: 2G
+ 
