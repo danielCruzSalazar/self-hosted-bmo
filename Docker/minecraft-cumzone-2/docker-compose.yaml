@@ -10,8 +10,6 @@ services:
       - "/home/lakakid/dotfiles/mine:/data"
     environment:
       ONLINE_MODE: "FALSE"
-      MAX_TICK_TIME: -1
-      # USE_MODPACK_START_SCRIPT: "FALSE"
       VERSION: 1.19.3
       PVP: "TRUE"
       ALLOW_FLIGHT: "TRUE"
@@ -20,20 +18,12 @@ services:
       MAX_PLAYERS: 18
       MAX_WORLD_SIZE: 300000
       ALLOW_NETHER: "TRUE"
-      TZ: "America/Los_Angeles"
-      ANNOUNCE_PLAYER_ACHIEVEMENTS: "TRUE"
       ENABLE_COMMAND_BLOCK: "TRUE"
       GENERATE_STRUCTURES: "TRUE"
-      VIEW_DISTANCE: 14
-      OPS: lakakidd
       MAX_BUILD_HEIGHT: 256
       SPAWN_PROTECTION: 1
-      MODE: survival
       MOTD: "Welcome to cumzone!"
-      # INIT_MEMORY: 5G
-      MAX_MEMORY: 8G
-      CONSOLE: "FALSE"
-      GUI: "FALSE"
+      VIEW_DISTANCE: 14
       SIMULATION_DISTANCE: 8
     deploy:
       restart_policy:
