@@ -4,7 +4,7 @@ services:
     image: panubo/vsftpd
     environment:
       - FTP=USER=danielcs
-      - FPT=PASSWORD=supersecret
+      - FTP=PASSWORD=supersecret
     volumes:
       - /media/hdd/movies:/srv
     expose:
