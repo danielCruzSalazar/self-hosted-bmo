@@ -36,5 +36,5 @@ services:
     volumes:
       - /etc/dns:/config
     restart: unless-stopped
-    sysctls:
-      - net.ipv4.ip_local_port_range=1024 65000
+    #sysctls:
+      #- net.ipv4.ip_local_port_range=1024 65000
