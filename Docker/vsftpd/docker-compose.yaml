@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  vsftpd:
+    image: pablokbs/panubo-vsftpd-arm
+    environment:
+      - FTP=USER=danielcs
+      - FPT=PASSWORD=supersecret
+    volumes:
+      - /mnt/storage/media:/srv
+    expose:
+      - 21
+    network_mode: host
