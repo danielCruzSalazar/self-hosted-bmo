@@ -5,7 +5,7 @@ services:
     hostname: dns-server
     image: technitium/dns-server:latest
     # For DHCP deployments, use "host" network mode and remove all the port mappings, including the ports array by commenting them
-    # network_mode: "host"
+    network_mode: "host"
     ports:
       - "5380:5380/tcp" #DNS web console (HTTP)
       # - "53443:53443/tcp" #DNS web console (HTTPS)
@@ -34,7 +34,7 @@ services:
       # - DNS_SERVER_FORWARDER_PROTOCOL=Tcp #Forwarder protocol options: Udp, Tcp, Tls, Https, HttpsJson.
       # - DNS_SERVER_LOG_USING_LOCAL_TIME=true #Enable this option to use local time instead of UTC for logging.
     volumes:
-      - /etc/dns:config
+      - /etc/dns:/config
     restart: unless-stopped
     sysctls:
       - net.ipv4.ip_local_port_range=1024 65000
