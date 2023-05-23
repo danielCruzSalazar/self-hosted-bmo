@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   vsftpd:
-    image: pablokbs/panubo-vsftpd-arm
+    image: panubo/vsftpd
     environment:
       - FTP=USER=danielcs
       - FPT=PASSWORD=supersecret
