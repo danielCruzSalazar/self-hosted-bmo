@@ -6,7 +6,7 @@ services:
       - FTP=USER=danielcs
       - FPT=PASSWORD=supersecret
     volumes:
-      - /mnt/storage/media:/srv
+      - /media/hdd/movies:/srv
     expose:
       - 21
     network_mode: host
