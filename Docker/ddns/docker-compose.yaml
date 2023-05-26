@@ -1,7 +1,0 @@
-services:
-  ddnslakakiddev:
-    container_name: ddns_updater
-    image: dragoncube/google-domains-ddns
-    volumes:
-      - /etc/localtime:/etc/localtime
-      - /home/lakakid/dotfiles/googleddns/:/config
