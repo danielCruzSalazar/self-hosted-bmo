@@ -1,18 +1,7 @@
-version: '3.3'
 services:
-    google-domains-ddns:
-        ports:
-            - '83:80'
-        volumes:
-            - '/var/run/docker.sock:/tmp/docker.sock:ro'
-            - '/etc/localtime:/etc/localtime'
-        restart: always
-        logging:
-            options:
-                max-size: 1g
-        environment:
-            - USERNAME={USERNAME}
-            - PASSWORD={PASSWORD}
-            - HOSTNAME={HOSTNAME}
-            - INTERVAL=5m
-        image: cwmr/google-domains-ddns
+  ddnsgooglejbpixelxyz:
+    container_name: ddns_updater
+    image: dragoncube/google-domains-ddns
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - /home/lakakid/dotfiles/ddns:/config
