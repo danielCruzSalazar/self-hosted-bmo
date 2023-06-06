@@ -1,0 +1,20 @@
+services:
+  obsidian:
+    image: 'ghcr.io/sytone/obsidian-remote:latest'
+    container_name: obsidian
+    restart: unless-stopped
+    ports:
+      - 8444:8080
+      - 8443:8443
+    volumes:
+      - /media/hdd/notes/:/vaults
+      - /home/lakakid/dotfiles/obsidian/config:/config
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Los_Angeles
+      - DOCKER_MODS=linuxserver/mods:universal-git
+      - CUSTOM_PORT="84444"
+      - CUSTOM_HTTPS_PORT="8443" 
+      - CUSTOM_USER="{USER}"
+      - PASSWORD="{PASSWORD}"
