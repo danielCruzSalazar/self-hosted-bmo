@@ -1,0 +1,11 @@
+version: '2.1'
+services:
+  trilium:
+    image: zadam/trilium
+    restart: always
+    environment:
+      - media/hdd/notes/trilium=/home/node/trilium-data
+    ports:
+      - "42069:8080"
+    volumes:
+      - trilium:/home/node/trilium-data
