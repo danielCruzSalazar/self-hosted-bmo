@@ -9,3 +9,6 @@ services:
       - "42069:8080"
     volumes:
       - trilium:/home/node/trilium-data
+
+volumes:
+  trilium:
