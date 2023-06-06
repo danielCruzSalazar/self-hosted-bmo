@@ -14,7 +14,7 @@ services:
       - PGID=1000
       - TZ=America/Los_Angeles
       - DOCKER_MODS=linuxserver/mods:universal-git
-      - CUSTOM_PORT="84444"
+      - CUSTOM_PORT="8444"
       - CUSTOM_HTTPS_PORT="8443" 
       - CUSTOM_USER="{USER}"
       - PASSWORD="{PASSWORD}"
