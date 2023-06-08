@@ -10,7 +10,7 @@ services:
       - "/home/lakakid/dotfiles/mine:/data"
     environment:  
       ONLINE_MODE: "FALSE"
-      VERSION: 1.19.3
+      VERSION: 1.20.0
       PVP: "TRUE"
       ALLOW_FLIGHT: "TRUE"
       EULA: "TRUE"
