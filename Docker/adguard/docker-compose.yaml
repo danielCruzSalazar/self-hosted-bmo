@@ -6,8 +6,8 @@ services:
         restart: unless-stopped
         network_mode: host
         volumes:
-            - '/mnt/user/appdata/adguard/work:/opt/adguardhome/work'
-            - '/mnt/user/appdata/adguard/opt:/opt/adguardhome/conf'
+            - '/home/lakakid/dotfiles/adguard/work:/opt/adguardhome/work'
+            - '/home/lakakid/dotfiles/adguard/opt:/opt/adguardhome/conf'
         ports:
             - '54:54/tcp'
             - '54:54/udp'

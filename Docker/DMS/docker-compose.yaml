@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+    docker-mailserver:
+        container_name: mailserver
+        hostname: $HOSTNAME
+        ports:
+            - '25:25'
+            - '143:143'
+            - '587:587'
+            - '993:993'
+        environment:
+            - ENABLE_SPAMASSASSIN=1
+            - SPAMASSASSIN_SPAM_TO_INBOX=1
+            - ENABLE_CLAMAV=1
+            - ENABLE_POSTGREY=1
+            - ENABLE_FAIL2BAN=0
+            - ENABLE_SASLAUTHD=0
+            - ONE_DIR=1
+            - TZ=America/New_York
+        volumes:
+            - '~/docker/mailserver/data/:/var/mail/'
+            - '~/docker/mailserver/state/:/var/mail-state/'
+            - '~/docker/mailserver/logs/:/var/log/mail/'
+            - '~/docker/mailserver/config/:/tmp/docker-mailserver/'
+        restart: unless-stopped
+        image: mailserver/docker-mailserver
