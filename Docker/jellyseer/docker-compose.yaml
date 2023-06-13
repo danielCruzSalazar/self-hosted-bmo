@@ -10,5 +10,5 @@ services:
        ports:
             - 5055:5055
        volumes:
-            - /mnt/user/appdata/config:/app/config
+            - /home/lakakid/dotfiles/jellyseer/:/app/config
        restart: unless-stopped
