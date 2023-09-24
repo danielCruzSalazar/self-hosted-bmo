@@ -8,7 +8,7 @@ services:
       - 192.168.100.65:25567:25567/tcp
       - 192.168.100.65:25567:25567/udp
 
-    volumes:
+    volumes: 
       - "/home/lakakid/dotfiles/minecraftforge:/data"
     tty: true
     stdin_open: true
@@ -37,7 +37,6 @@ services:
       ENABLE_COMMAND_BLOCK: "TRUE"
       GENERATE_STRUCTURES: "TRUE"
       VIEW_DISTANCE: 16
-      OPS: user, lakakidd
       MAX_BUILD_HEIGHT: 256
       SPAWN_PROTECTION: 1
       MODE: survival
