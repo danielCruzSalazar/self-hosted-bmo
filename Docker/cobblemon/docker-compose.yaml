@@ -13,6 +13,8 @@ services:
       INIT_MEMORY: 4G
       MAX_MEMORY: 8G
       TYPE: FABRIC
+      FABRIC_LOADER_VERSION: "0.14.22"
+      FABRIC_LAUNCHER_VERSION: "0.11.2"
       VERSION: 1.19.2
       DIFFICULTY: hard
       MOTD: "Pokemon cricosos a 5 peso"
@@ -20,6 +22,6 @@ services:
       MAX_PLAYERS: 69
       MODRINTH_PROJECTS: cobblemon
     ports:
-      - 25567:25567
+      - 25565:25565
     volumes:
       - /home/lakakid/dotfiles/cobblemon:/data
