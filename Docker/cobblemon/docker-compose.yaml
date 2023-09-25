@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  minecraft:
+    container_name: cobblemon
+    image: itzg/minecraft-server:latest
+    restart: unless-stopped
+    environment:
+      UID: 1000
+      GID: 1000
+      EULA: "TRUE"
+      REPLACE_ENV_VARIABLES: "TRUE"
+      INIT_MEMORY: 4G
+      MAX_MEMORY: 8G
+      TYPE: FABRIC
+      VERSION: 1.19.2
+      DIFFICULTY: hard
+      MOTD: "Pokemon cricosos a 5 peso"
+      PVP: "FALSE"
+      MAX_PLAYERS: 69
+      MODRINTH_PROJECTS: cobblemon
+    ports:
+      - 25567:25567
+    volumes:
+      - /home/lakakid/dotfiles/cobblemon:/data
