@@ -23,7 +23,7 @@ services:
       MODRINTH_PROJECTS: cobblemon
       tty: "true"
       stdin_open: "true"
-      OPS: lakakidd
+      OPS: "lakakidd"
     ports:
       - 25565:25565
     volumes:
