@@ -21,9 +21,9 @@ services:
       PVP: "FALSE"
       MAX_PLAYERS: 69
       MODRINTH_PROJECTS: cobblemon
-      tty: "true"
-      stdin_open: "true"
       OPS: "lakakidd"
+    tty: true
+    stdin_open: true
     ports:
       - 25565:25565
     volumes:
