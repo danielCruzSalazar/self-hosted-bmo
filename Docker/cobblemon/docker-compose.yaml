@@ -18,7 +18,7 @@ services:
       VERSION: 1.19.2
       DIFFICULTY: hard
       MOTD: "Pokemon cricosos a 5 peso"
-      PVP: "FALSE"
+      PVP: "TRUE"
       MAX_PLAYERS: 69
       MODRINTH_PROJECTS: cobblemon
       OPS: "lakakidd"
