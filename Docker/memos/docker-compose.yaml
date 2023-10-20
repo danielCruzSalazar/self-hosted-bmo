@@ -6,6 +6,6 @@ services:
     hostname: memos
     restart: unless-stopped
     volumes:
-      - /home/lakakid/dotfiles/memos:/memos
+      - "/home/lakakid/dotfiles/memos:/memos"
     ports:
       - 5230:5230
