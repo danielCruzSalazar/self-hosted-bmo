@@ -10,8 +10,8 @@ services:
       - '81' #DASHBOARD
       - '444' #HTTPS TRAFFIC
     volumes:
-      - /mnt/user/appdata/nginxpm:/data
-      - /mnt/user/appdata/nginxpm/letsencrypt:/etc/letsencrypt
+      - /media/hdd/nginxpm:/data
+      - /media/hdd/nginxpm/letsencrypt:/etc/letsencrypt
     deploy:
       restart_policy:
         condition: on-failure
