@@ -1,13 +1,17 @@
+version: "3.8"
 services:
-  app:
+  nginx:
     image: 'jc21/nginx-proxy-manager:latest'
     container_name: npm
     hostname: npm_host
     restart: unless-stopped
     ports:
-      - '88:80' #HTTP TRAFFIC
-      - '81:81' #DASHBOARD
-      - '444:443' #HTTPS TRAFFIC
+      - '88' #HTTP TRAFFIC
+      - '81' #DASHBOARD
+      - '444' #HTTPS TRAFFIC
     volumes:
       - /mnt/user/appdata/nginxpm:/data
       - /mnt/user/appdata/nginxpm/letsencrypt:/etc/letsencrypt
+    deploy:
+      restart_policy:
+        condition: on-failure
